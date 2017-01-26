@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<gfx-xform version="1">
+  <input file="tileset.png" type="png" tile-width="8" tile-height="8" />
+  <output file="tileset.inc" remove-duplicate-tiles="true">
+    <tiles var-name="tileset"/>
+    <maps pointers-size="8">
+      <map var-name="map_graphic" left="0" top="2" width="9" height="20" />
+      
+      <map var-name="map_target_t" left="9" top="2" width="3" height="3" />
+      <map var-name="map_target_r" left="13" top="2" width="3" height="3" />
+      <map var-name="map_target_b" left="17" top="2" width="3" height="3" />
+      <map var-name="map_target_l" left="21" top="2" width="3" height="3" />
+      <map var-name="map_blank" left="25" top="2" width="3" height="3" />
+      
+      <map var-name="map_target_t_on" left="9" top="6" width="3" height="3" />
+      <map var-name="map_target_r_on" left="13" top="6" width="3" height="3" />
+      <map var-name="map_target_b_on" left="17" top="6" width="3" height="3" />
+      <map var-name="map_target_l_on" left="21" top="6" width="3" height="3" />
+      <map var-name="map_blocker" left="25" top="6" width="3" height="3" />
+
+      <map var-name="map_mirror_bl" left="9" top="10" width="3" height="3" />
+      <map var-name="map_mirror_tl" left="13" top="10" width="3" height="3" />
+      <map var-name="map_mirror_tr" left="17" top="10" width="3" height="3" />
+      <map var-name="map_mirror_br" left="21" top="10" width="3" height="3" />
+      <map var-name="map_split_tlbr" left="25" top="10" width="3" height="3" />
+
+      <map var-name="map_mirror_bl_on" left="9" top="14" width="3" height="3" />
+      <map var-name="map_mirror_tl_on" left="13" top="14" width="3" height="3" />
+      <map var-name="map_mirror_tr_on" left="17" top="14" width="3" height="3" />
+      <map var-name="map_mirror_br_on" left="21" top="14" width="3" height="3" />
+      <map var-name="map_split_trbl" left="25" top="14" width="3" height="3" />
+
+      <map var-name="map_split_tlbr_on_l" left="9" top="18" width="3" height="3" />
+      <map var-name="map_split_tlbr_on_t" left="13" top="18" width="3" height="3" />
+      <map var-name="map_split_tlbr_on_r" left="17" top="18" width="3" height="3" />
+      <map var-name="map_split_tlbr_on_b" left="21" top="18" width="3" height="3" />
+      <map var-name="map_split_tlbr_on_a" left="25" top="18" width="3" height="3" />
+
+      <map var-name="map_split_trbl_on_l" left="9" top="24" width="3" height="3" />
+      <map var-name="map_split_trbl_on_t" left="13" top="24" width="3" height="3" />
+      <map var-name="map_split_trbl_on_r" left="17" top="24" width="3" height="3" />
+      <map var-name="map_split_trbl_on_b" left="21" top="24" width="3" height="3" />
+      <map var-name="map_split_trbl_on_a" left="25" top="24" width="3" height="3" />
+
+      <map var-name="map_blank_on_h" left="0" top="24" width="3" height="3" />
+      <map var-name="map_blank_on_v" left="3" top="24" width="3" height="3" />
+      <map var-name="map_blank_on_hv" left="6" top="24" width="3" height="3" />
+
+      <map var-name="map_gap_h" left="1" top="25" width="1" height="1" />
+      <map var-name="map_gap_v" left="4" top="25" width="1" height="1" />
+      
+      <map var-name="map_laser_source" left="13" top="21" width="2" height="3" />
+      <map var-name="map_laser_source_off" left="7" top="6" width="2" height="3" />
+      
+      <map var-name="map_move_to_grid" left="17" top="22" width="5" height="1" />
+      <map var-name="map_prev_next" left="2" top="23" width="4" height="1" />
+      <map var-name="map_next_red" left="6" top="23" width="2" height="1" />
+
+    </maps>
+  </output>
+</gfx-xform>
