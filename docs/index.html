@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=600px">
+    <title>Uzebox - Laser Puzzle</title>
+    <style>
+      body {
+        font-family: arial;
+        margin: 0;
+        padding: none;
+        background-color: #000000;
+      }
+
+      :root {
+	  touch-action: pan-x pan-y;
+	  height: 100%
+      }
+
+      div.emscripten{
+        margin-top: 20px;
+      }
+
+      canvas.emscripten {
+        border: 0px none;
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+
+      div.touch_controls {
+        color: #888888;
+        width: 600px;
+        vertical-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+      }
+
+      div.keyboard_controls {
+        color: #888888;
+        width: 600px;
+        vertical-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+	@media screen and (max-width: 600px) {
+            visibility: hidden;
+	    display: none;
+	}
+      }
+
+      div.button {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="emscripten">
+      <canvas class="emscripten" id="canvas"></canvas>
+    </div>
+
+    <div class="touch_controls" align=center>
+      <svg width="600px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 143.35159 65.118034" version="1.1">
+	<g transform="translate(-34.230936,-108.37667)">
+
+	  <rect style="fill:#7f7f7f;stroke:#3f3f3f;stroke-width:0.25"
+		id="BTN_SL" width="36.609547" height="12.415571" x="37.826363" y="108.50896" rx="2" ry="2"
+		onmousedown="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 74}))"
+		onmouseup="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 74}))"
+		ontouchstart="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 74}))"
+		ontouchend="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 74}))"
+		ontouchcancel="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 74}))"
+		/>
+
+	  <rect style="fill:#7f7f7f;stroke:#3f3f3f;stroke-width:0.25"
+		id="BTN_SR" width="36.609547" height="12.415571" x="133.98979" y="108.50896" rx="2" ry="2"
+		onmousedown="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 75}))"
+		onmouseup="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 75}))"
+		ontouchstart="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 75}))"
+		ontouchend="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 75}))"
+		ontouchcancel="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 75}))"
+		/>
+
+	  <rect style="fill:#3f3f3f;stroke:#1f1f1f;stroke-width:0.25"
+		id="BTN_UP" width="13.438926" height="13.438926" x="47.841557" y="132.78403" rx="2" ry="2"
+		onmousedown="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 38}))"
+		onmouseup="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 38}))"
+		ontouchstart="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 38}))"
+		ontouchend="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 38}))"
+		ontouchcancel="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 38}))"
+		/>
+
+	  <rect style="fill:#3f3f3f;stroke:#1f1f1f;stroke-width:0.25"
+		id="BTN_LEFT" width="13.438926" height="13.438926" x="34.363228" y="146.29016" rx="2" ry="2"
+		onmousedown="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 37}))"
+		onmouseup="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 37}))"
+		ontouchstart="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 37}))"
+		ontouchend="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 37}))"
+		ontouchcancel="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 37}))"
+		/>
+
+	  <rect style="fill:#3f3f3f;stroke:#1f1f1f;stroke-width:0.25"
+		id="BTN_RIGHT" width="13.438926" height="13.438926" x="61.320564" y="146.29016" rx="2" ry="2"
+		onmousedown="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 39}))"
+		onmouseup="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 39}))"
+		ontouchstart="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 39}))"
+		ontouchend="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 39}))"
+		ontouchcancel="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 39}))"
+		/>
+
+	  <rect style="fill:#3f3f3f;stroke:#1f1f1f;stroke-width:0.25"
+		id="BTN_DOWN" width="13.438926" height="13.438926" x="47.841553" y="159.7775" rx="2" ry="2"
+		onmousedown="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 40}))"
+		onmouseup="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 40}))"
+		ontouchstart="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 40}))"
+		ontouchend="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 40}))"
+		ontouchcancel="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 40}))"
+		/>
+
+	  <rect style="fill:#3f3f3f;stroke:#1f1f1f;stroke-width:0.25"
+		id="BTN_SELECT" width="14.856842" height="8.6144733" x="84.476341" y="156.66455" rx="2" ry="2"
+		onmousedown="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 9}))"
+		onmouseup="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 9}))"
+		ontouchstart="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 9}))"
+		ontouchend="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 9}))"
+		ontouchcancel="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 9}))"
+		/>
+
+	  <rect style="fill:#3f3f3f;stroke:#1f1f1f;stroke-width:0.25"
+		id="BTN_START" width="14.856842" height="8.6144733" x="103.08696" y="156.66455" rx="2" ry="2"
+		onmousedown="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 13}))"
+		onmouseup="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 13}))"
+		ontouchstart="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 13}))"
+		ontouchend="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 13}))"
+		ontouchcancel="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 13}))"
+		/>
+
+	  <circle style="fill:#00007f;stroke:#00003f;stroke-width:0.25"
+		  id="BTN_X" cx="152.86514" cy="139.90771" r="8.0673637"
+		  onmousedown="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 87}))"
+		  onmouseup="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 87}))"
+		  ontouchstart="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 87}))"
+		  ontouchend="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 87}))"
+		  ontouchcancel="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 87}))"
+		  />
+
+	  <circle style="fill:#afaf00;stroke:#7f7f00;stroke-width:0.25"
+		  id="BTN_B" cx="152.86514" cy="165.29504" r="8.0673637"
+		  onmousedown="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 65}))"
+		  onmouseup="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 65}))"
+		  ontouchstart="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 65}))"
+		  ontouchend="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 65}))"
+		  ontouchcancel="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 65}))"
+		  />
+
+	  <circle style="fill:#007f00;stroke:#003f00;stroke-width:0.25"
+		  id="BTN_Y" cx="136.34741" cy="152.60138" r="8.0673637"
+		  onmousedown="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 81}))"
+		  onmouseup="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 81}))"
+		  ontouchstart="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 81}))"
+		  ontouchend="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 81}))"
+		  ontouchcancel="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 81}))"
+		  />
+
+	  <circle style="fill:#7f0000;stroke:#3f0000;stroke-width:0.25"
+		  id="BTN_A" cx="169.38287" cy="152.60138" r="8.0673637"
+		  onmousedown="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 83}))"
+		  onmouseup="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 83}))"
+		  ontouchstart="canvas.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 83}))"
+		  ontouchend="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 83}))"
+		  ontouchcancel="canvas.dispatchEvent(new KeyboardEvent('keyup', {bubbles: true, cancelable: true, keyCode: 83}))"
+		  />
+	</g>
+      </svg>
+    </div>
+
+    <div class="keyboard_controls">
+      <div class="button"><input type="button" value="Fullscreen" onclick="Module.requestFullscreen(true, false)"></div>
+      <div>
+        <h3>Keyboard Controls:</h3>
+        <ul>
+          <li>Arrow keys: SNES controller DPAD</li>
+          <li>Q: SNES controller 'Y'</li>
+          <li>W: SNES controller 'X'</li>
+          <li>A: SNES controller 'B'</li>
+          <li>S: SNES controller 'A'</li>
+          <li>Enter: SNES controller 'Start'</li>
+          <li>Space: SNES controller 'Select'</li>
+          <li>Right shift: SNES controller Right shoulder</li>
+          <li>Left shift: SNES controller Left shoulder</li>
+          <li>F2: Toggle low quality (helps if emulator runs too slow)</li>
+          <li>F3: Toggle emulator debug information (slower with them on)</li>
+          <li>F7: Toggle flicker reduction (slower with it on)</li>
+          <li>F8: Toggle UZEM style keymapping (A, S, Y, X instead of Q, W, A, S)</li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+      var Module = {
+        canvas: (function() {
+          return document.getElementById('canvas');
+        })(),
+      };
+/*
+      (function() {
+        var memoryInitializer = 'cuzebox.html.mem';
+        var xhr = Module['memoryInitializerRequest'] = new XMLHttpRequest();
+        xhr.open('GET', memoryInitializer, true);
+        xhr.responseType = 'arraybuffer';
+        xhr.send(null);
+      })();
+*/
+      var script = document.createElement('script');
+      script.src = "cuzebox.js";
+      document.body.appendChild(script);
+
+    </script>
+
+  </body>
+</html>
