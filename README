@@ -1,0 +1,35 @@
+Genre: Puzzle
+Developer: Matt Pandina
+Release date: January 26, 2017
+
+Background
+
+The Uzebox is a retro-minimalist homebrew game console, created in
+2008 by Alec Bourque. It is based on an AVR 8-bit general purpose
+microcontroller made by Atmel. The microcontroller is overclocked to
+run at 28.61818 MHz, and only has a total of 4 KB of RAM, and 64 KB of
+program memory.
+
+About Laser Puzzle
+
+Laser Puzzle is a Uzebox implementation of a laser-based puzzle
+game. It has 40 levels, and the object is to place pieces on the board
+in such a way that the laser beam is deflected into one or two targets
+from the proper direction. Pieces that aren't fixed in place
+(indicated by a lock icon) may be dragged and dropped onto any blank
+square, or rotated to face any direction. In order to properly solve
+each puzzle, the laser beam must pass through all of the pieces that
+aren't blockers. This game is more kid-friendly than Laser Puzzle II.
+
+Play Laser Puzzle
+
+If you don't have a Uzebox video game console, you can play it using
+an online Uzebox emulator: https://artcfox.github.io/laser/
+
+Using a keyboard is preferred, but the touch controls should allow you
+to at least preview the gameplay if you are on a mobile device. The
+native desktop emulator supports USB SNES game controllers, or you can
+build your own Uzebox game console: https://uzebox.org/
+
+Read the discussion thread for Laser Puzzle on the Uzebox forum:
+https://uzebox.org/forums/viewtopic.php?f=5&t=2424
